@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <title>Project</title>
+</head>
+<body>
+
+      <!-- Sprite-->
+      <svg style="display: none;">
+            <symbol id="twitter" viewBox="0 0 56.693 56.693">
+                  <g>
+                        <path d="M52.837,15.065c-1.811,0.805-3.76,1.348-5.805,1.591c2.088-1.25,3.689-3.23,4.444-5.592c-1.953,1.159-4.115,2-6.418,2.454  c-1.843-1.964-4.47-3.192-7.377-3.192c-5.581,0-10.106,4.525-10.106,10.107c0,0.791,0.089,1.562,0.262,2.303  c-8.4-0.422-15.848-4.445-20.833-10.56c-0.87,1.492-1.368,3.228-1.368,5.082c0,3.506,1.784,6.6,4.496,8.412  c-1.656-0.053-3.215-0.508-4.578-1.265c-0.001,0.042-0.001,0.085-0.001,0.128c0,4.896,3.484,8.98,8.108,9.91  c-0.848,0.23-1.741,0.354-2.663,0.354c-0.652,0-1.285-0.063-1.902-0.182c1.287,4.015,5.019,6.938,9.441,7.019  c-3.459,2.711-7.816,4.327-12.552,4.327c-0.815,0-1.62-0.048-2.411-0.142c4.474,2.869,9.786,4.541,15.493,4.541  c18.591,0,28.756-15.4,28.756-28.756c0-0.438-0.009-0.875-0.028-1.309C49.769,18.873,51.483,17.092,52.837,15.065z"/>
+                  </g>
+            </symbol>
+
+            <symbol id="twich" viewBox="0 0 24 24">
+                  <g>
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M21 3v11.74l-4.696 4.695h-3.913l-2.437 2.348H6.913v-2.348H3V6.13L4.227 3H21zm-1.565 1.565H6.13v11.74h3.13v2.347l2.349-2.348h4.695l3.13-3.13V4.565zm-3.13 3.13v4.696h-1.566V7.696h1.565zm-3.914 0v4.696h-1.565V7.696h1.565z"/>
+                  </g>
+            </symbol>
+
+            <symbol id="facebook" viewBox="0 0 56.693 56.693">
+                  <g>
+                        <path d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029  c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z"/>
+                  </g>
+            </symbol>
+
+            <symbol id="vkontakte" viewBox="0 0 576 512">
+                  <g>
+                        <path d="M545 117.7c3.7-12.5 0-21.7-17.8-21.7h-58.9c-15 0-21.9 7.9-25.6 16.7 0 0-30 73.1-72.4 120.5-13.7 13.7-20 18.1-27.5 18.1-3.7 0-9.4-4.4-9.4-16.9V117.7c0-15-4.2-21.7-16.6-21.7h-92.6c-9.4 0-15 7-15 13.5 0 14.2 21.2 17.5 23.4 57.5v86.8c0 19-3.4 22.5-10.9 22.5-20 0-68.6-73.4-97.4-157.4-5.8-16.3-11.5-22.9-26.6-22.9H38.8c-16.8 0-20.2 7.9-20.2 16.7 0 15.6 20 93.1 93.1 195.5C160.4 378.1 229 416 291.4 416c37.5 0 42.1-8.4 42.1-22.9 0-66.8-3.4-73.1 15.4-73.1 8.7 0 23.7 4.4 58.7 38.1 40 40 46.6 57.9 69 57.9h58.9c16.8 0 25.3-8.4 20.4-25-11.2-34.9-86.9-106.7-90.3-111.5-8.7-11.2-6.2-16.2 0-26.2.1-.1 72-101.3 79.4-135.6z"/>
+                  </g>
+            </symbol>
+      </svg>
+
+      <!-- Header-->
+      <header class="header">
+            <div class="container">
+                  <div class="header__inner">
+                        <div class="header__logo">
+                              <img class="img" src="assets/images/header_logo.png" alt="Logo">
+                        </div>
+
+                        <div class="social__link">
+                              <a class="link__item" href="" target="_blank">
+                                    <svg class="link__icon">
+                                          <use xlink:href="#twitter"></use>
+                                    </svg>
+                              </a>
+
+                              <a class="link__item" href="" target="_blank">
+                                    <svg class="link__icon">
+                                          <use xlink:href="#twich"></use>
+                                    </svg>
+                              </a>
+
+                              <a class="link__item" href="" target="_blank">
+                                    <svg class="link__icon">
+                                          <use xlink:href="#facebook"></use>
+                                    </svg>
+                              </a>
+
+                              <a class="link__item" href="" target="_blank">
+                                    <svg class="link__icon">
+                                          <use xlink:href="#vkontakte"></use>
+                                    </svg>
+                              </a>
+                        </div>
+
+                  </div> <!-- /.header__inner-->
+            </div> <!-- /.container-->
+      </header>
+
+
+      <!-- Intro -->
+<section class="intro">
+      <div class="intro__slider" id="introSlider">
+            <div class="into__slider--item">
+                  <img class="intro__slider--img" src="assets/images/intro_img1.jpg" alt="image">
+            </div>
+            <div class="into__slider--item">
+                  <img class="intro__slider--img" src="assets/images/intro_img2.jpg" alt="image">
+            </div>
+            <div class="into__slider--item">
+                  <img class="intro__slider--img" src="assets/images/intro_img3.jpg" alt="image">
+            </div>
+      </div>
+
+      <div class="container">
+            <div class="intro__inner">
+                  <img class="img" src="assets/images/intro_logo.png" alt="PUBG-Logo">
+                  <h1 class="intro__title">ESL Pro League CSGO</h1>
+                  <div class="intro__text">
+                        <p>League CS:GO is the new online league in Counter-Strike: Global Offensive, with $100,000 total prize pool. 16 teams from Europe and the CIS will take part in the League, with 4 teams going to League through open qualifiers. </p>
+                  </div>
+                  <div class="intro__btn">
+                        <a class="btn">READ ANNOUNCMENT</a>
+                        <a class="btn">GET TICKETS</a>
+                  </div>
+            </div>
+      </div>
+</section>
+
+
+<!-- Schedule -->
+<section class="section  section--schedule">
+      <div class="container">
+            <h2 class="section__title">Расписание и результаты</h2>
+            <div class="schedule">
+                  <div class="tabs">
+                        <div class="tabs__nav">
+                              <button class="tabs__nav--btn" type="button"  data-tabs="#matches">Matches</button>
+                              <button class="tabs__nav--btn" type="button"  data-tabs="#battles">Battles</button>
+                        </div>
+                        <div class="tabs__wrapper">
+
+                              <!-- Tabs Matches -->
+                              <div class="tabs__item active" id="matches">
+                                    <div class="tabs__content">
+                                          <div class="tabs__content--header">
+                                                <p>Asia Minor: Play-Off</p>
+                                                <div class="tabs__content--time">
+                                                      <p>29 Oct</p>
+                                                      <p><span>19:00</span></p>
+                                                </div>
+                                          </div>
+                                          <hr>
+
+                                          <div class="tabs__content--icons">
+                                                <img src="assets/images/team-icons/team1.png" alt="team icons">
+                                                <img src="assets/images/team-icons/team2.png" alt="team icons">
+                                          </div>
+
+                                          <div class="tabs__info">
+                                                <div class="tabs__info--title">
+                                                      <p>Jenny Bell</p>
+                                                      <div class="tabs__info--coeff">
+                                                           <p>3.22</p>
+                                                      </div>
+                                                </div>
+                                                <div class="tabs__info--title">
+                                                      <p>Arlene Robertson</p>
+                                                      <div class="tabs__info--coeff">
+                                                             <p>53.22</p>
+                                                      </div>
+                                                </div>
+                                          </div>
+
+                                          <div class="tabs__footer">
+                                                <p>Starts in: 5 hours 39 min • Bо 3</p>
+                                                <img src="assets/images/GG_logo.png" alt="footer logo">
+                                          </div>
+
+                                          <!-- Watch Live -->
+                                          <div class="tabs__live">
+                                                <button class="tabs__live--watch" type="button">
+                                                      <img class="tabs__live--vector" src="assets/images/vector_live.png" alt="vector">
+                                                      <div class="tabs__live--title">WHATCH LIVE</div>
+                                                </button>
+                                          </div>
+                                    </div> <!-- /.tabs__content-->
+
+                                    <div class="tabs__content">
+                                          <div class="tabs__content--header">
+                                                <p>Asia Minor: Play-Off</p>
+                                                <div class="tabs__content--time">
+                                                      <p>29 Oct</p>
+                                                      <p><span>19:00</span></p>
+                                                </div>
+                                          </div>
+                                          <hr>
+
+                                          <div class="tabs__content--icons">
+                                                <img src="assets/images/team-icons/team3.png" alt="team icons">
+                                                <img src="assets/images/team-icons/team4.png" alt="team icons">
+                                          </div>
+
+                                          <div class="tabs__info">
+                                                <div class="tabs__info--title">
+                                                      <p>Regina Watson</p>
+                                                      <div class="tabs__info--coeff">
+                                                           <p>3.22</p>
+                                                      </div>
+                                                </div>
+                                                <div class="tabs__info--title">
+                                                      <p>Kathryn Jones</p>
+                                                      <div class="tabs__info--coeff">
+                                                             <p>53.22</p>
+                                                      </div>
+                                                </div>
+                                          </div>
+
+                                          <div class="tabs__footer">
+                                                <p>Starts in: 5 hours 39 min • Bо 3</p>
+                                                <img src="assets/images/GG_logo.png" alt="footer logo">
+                                          </div>
+
+                                          <!-- Watch Live -->
+                                          <div class="tabs__live">
+                                                <button class="tabs__live--watch" type="button">
+                                                      <img class="tabs__live--vector" src="assets/images/vector_live.png" alt="vector">
+                                                      <div class="tabs__live--title">WHATCH LIVE</div>
+                                                </button>
+                                          </div>
+                                    </div> <!-- /.tabs__content-->
+
+                                    <div class="tabs__content">
+                                          <div class="tabs__content--header">
+                                                <p>Asia Minor: Play-Off</p>
+                                                <div class="tabs__content--time">
+                                                      <p>29 Oct</p>
+                                                      <p><span>19:00</span></p>
+                                                </div>
+                                          </div>
+                                          <hr>
+
+                                          <div class="tabs__content--icons">
+                                                <img src="assets/images/team-icons/team5.png" alt="team icons">
+                                                <img src="assets/images/team-icons/team6.png" alt="team icons">
+                                          </div>
+
+                                          <div class="tabs__info">
+                                                <div class="tabs__info--title">
+                                                      <p>Ricardo Hawkins</p>
+                                                      <div class="tabs__info--coeff">
+                                                           <p>3.22</p>
+                                                      </div>
+                                                </div>
+                                                <div class="tabs__info--title">
+                                                      <p>Bruce Simmons</p>
+                                                      <div class="tabs__info--coeff">
+                                                             <p>53.22</p>
+                                                      </div>
+                                                </div>
+                                          </div>
+
+                                          <div class="tabs__footer">
+                                                <p>Starts in: 5 hours 39 min • Bо 3</p>
+                                                <img src="assets/images/GG_logo.png" alt="footer logo">
+                                          </div>
+
+                                          <!-- Watch Live -->
+                                          <div class="tabs__live">
+                                                <button class="tabs__live--watch" type="button">
+                                                      <img class="tabs__live--vector" src="assets/images/vector_live.png" alt="vector">
+                                                      <div class="tabs__live--title">WHATCH LIVE</div>
+                                                </button>
+                                          </div>
+                                    </div> <!-- /.tabs__content-->
+
+                                    <div class="tabs__content">
+                                          <div class="tabs__content--header">
+                                                <p>Asia Minor: Play-Off</p>
+                                                <div class="tabs__content--time">
+                                                      <p>29 Oct</p>
+                                                      <p><span>19:00</span></p>
+                                                </div>
+                                          </div>
+                                          <hr>
+
+                                          <div class="tabs__content--icons">
+                                                <img src="assets/images/team-icons/team1.png" alt="team icons">
+                                                <img src="assets/images/team-icons/team2.png" alt="team icons">
+                                          </div>
+
+                                          <div class="tabs__info">
+                                                <div class="tabs__info--title">
+                                                      <p>Jenny Bell</p>
+                                                      <div class="tabs__info--coeff">
+                                                           <p>3.22</p>
+                                                      </div>
+                                                </div>
+                                                <div class="tabs__info--title">
+                                                      <p>Arlene Robertson</p>
+                                                      <div class="tabs__info--coeff">
+                                                             <p>53.22</p>
+                                                      </div>
+                                                </div>
+                                          </div>
+
+                                          <div class="tabs__footer">
+                                                <p>Starts in: 5 hours 39 min • Bо 3</p>
+                                                <img src="assets/images/GG_logo.png" alt="footer logo">
+                                          </div>
+
+                                          <!-- Watch Live -->
+                                          <div class="tabs__live">
+                                                <button class="tabs__live--watch" type="button">
+                                                      <img class="tabs__live--vector" src="assets/images/vector_live.png" alt="vector">
+                                                      <div class="tabs__live--title">WHATCH LIVE</div>
+                                                </button>
+                                          </div>
+                                    </div> <!-- /.tabs__content-->
+
+
+                                    <div class="tabs__content">
+                                          <div class="tabs__content--header">
+                                                <p>Asia Minor: Play-Off</p>
+                                                <div class="tabs__content--time">
+                                                      <p>29 Oct</p>
+                                                      <p><span>19:00</span></p>
+                                                </div>
+                                          </div>
+                                          <hr>
+
+                                          <div class="tabs__content--icons">
+                                                <img src="assets/images/team-icons/team3.png" alt="team icons">
+                                                <img src="assets/images/team-icons/team4.png" alt="team icons">
+                                          </div>
+
+                                          <div class="tabs__info">
+                                                <div class="tabs__info--title">
+                                                      <p>Regina Watson</p>
+                                                      <div class="tabs__info--coeff">
+                                                           <p>3.22</p>
+                                                      </div>
+                                                </div>
+                                                <div class="tabs__info--title">
+                                                      <p>Kathryn Jones</p>
+                                                      <div class="tabs__info--coeff">
+                                                             <p>53.22</p>
+                                                      </div>
+                                                </div>
+                                          </div>
+
+                                          <div class="tabs__footer">
+                                                <p>Starts in: 5 hours 39 min • Bо 3</p>
+                                                <img src="assets/images/GG_logo.png" alt="footer logo">
+                                          </div>
+
+                                          <!-- Watch Live -->
+                                          <div class="tabs__live">
+                                                <button class="tabs__live--watch" type="button">
+                                                      <img class="tabs__live--vector" src="assets/images/vector_live.png" alt="vector">
+                                                      <div class="tabs__live--title">WHATCH LIVE</div>
+                                                </button>
+                                          </div>
+                                    </div> <!-- /.tabs__content-->
+
+                                    <div class="tabs__content">
+                                          <div class="tabs__content--header">
+                                                <p>Asia Minor: Play-Off</p>
+                                                <div class="tabs__content--time">
+                                                      <p>29 Oct</p>
+                                                      <p><span>19:00</span></p>
+                                                </div>
+                                          </div>
+                                          <hr>
+
+                                          <div class="tabs__content--icons">
+                                                <img src="assets/images/team-icons/team1.png" alt="team icons">
+                                                <img src="assets/images/team-icons/team2.png" alt="team icons">
+                                          </div>
+
+                                          <div class="tabs__info">
+                                                <div class="tabs__info--title">
+                                                      <p>Jenny Bell</p>
+                                                      <div class="tabs__info--coeff">
+                                                           <p>3.22</p>
+                                                      </div>
+                                                </div>
+                                                <div class="tabs__info--title">
+                                                      <p>Arlene Robertson</p>
+                                                      <div class="tabs__info--coeff">
+                                                             <p>53.22</p>
+                                                      </div>
+                                                </div>
+                                          </div>
+
+                                          <div class="tabs__footer">
+                                                <p>Starts in: 5 hours 39 min • Bо 3</p>
+                                                <img src="assets/images/GG_logo.png" alt="footer logo">
+                                          </div>
+
+                                          <!-- Watch Live -->
+                                          <div class="tabs__live">
+                                                <button class="tabs__live--watch" type="button">
+                                                      <img class="tabs__live--vector" src="assets/images/vector_live.png" alt="vector">
+                                                      <div class="tabs__live--title">WHATCH LIVE</div>
+                                                </button>
+                                          </div>
+                                    </div> <!-- /.tabs__content-->
+
+                                    <div class="tabs__content">
+                                          <div class="tabs__content--header">
+                                                <p>Asia Minor: Play-Off</p>
+                                                <div class="tabs__content--time">
+                                                      <p>29 Oct</p>
+                                                      <p><span>19:00</span></p>
+                                                </div>
+                                          </div>
+                                          <hr>
+
+                                          <div class="tabs__content--icons">
+                                                <img src="assets/images/team-icons/team5.png" alt="team icons">
+                                                <img src="assets/images/team-icons/team6.png" alt="team icons">
+                                          </div>
+
+                                          <div class="tabs__info">
+                                                <div class="tabs__info--title">
+                                                      <p>Ricardo Hawkins</p>
+                                                      <div class="tabs__info--coeff">
+                                                           <p>3.22</p>
+                                                      </div>
+                                                </div>
+                                                <div class="tabs__info--title">
+                                                      <p>Bruce Simmons</p>
+                                                      <div class="tabs__info--coeff">
+                                                             <p>53.22</p>
+                                                      </div>
+                                                </div>
+                                          </div>
+
+                                          <div class="tabs__footer">
+                                                <p>Starts in: 5 hours 39 min • Bо 3</p>
+                                                <img src="assets/images/GG_logo.png" alt="footer logo">
+                                          </div>
+
+                                          <!-- Watch Live -->
+                                          <div class="tabs__live">
+                                                <button class="tabs__live--watch" type="button">
+                                                      <img class="tabs__live--vector" src="assets/images/vector_live.png" alt="vector">
+                                                      <div class="tabs__live--title">WHATCH LIVE</div>
+                                                </button>
+                                          </div>
+                                    </div> <!-- /.tabs__content-->
+
+                                    <div class="tabs__content">
+                                          <div class="tabs__content--header">
+                                                <p>Asia Minor: Play-Off</p>
+                                                <div class="tabs__content--time">
+                                                      <p>29 Oct</p>
+                                                      <p><span>19:00</span></p>
+                                                </div>
+                                          </div>
+                                          <hr>
+
+                                          <div class="tabs__content--icons">
+                                                <img src="assets/images/team-icons/team1.png" alt="team icons">
+                                                <img src="assets/images/team-icons/team2.png" alt="team icons">
+                                          </div>
+
+                                          <div class="tabs__info">
+                                                <div class="tabs__info--title">
+                                                      <p>Jenny Bell</p>
+                                                      <div class="tabs__info--coeff">
+                                                           <p>3.22</p>
+                                                      </div>
+                                                </div>
+                                                <div class="tabs__info--title">
+                                                      <p>Arlene Robertson</p>
+                                                      <div class="tabs__info--coeff">
+                                                             <p>53.22</p>
+                                                      </div>
+                                                </div>
+                                          </div>
+
+                                          <div class="tabs__footer">
+                                                <p>Starts in: 5 hours 39 min • Bо 3</p>
+                                                <img src="assets/images/GG_logo.png" alt="footer logo">
+                                          </div>
+
+                                          <!-- Watch Live -->
+                                          <div class="tabs__live">
+                                                <button class="tabs__live--watch" type="button">
+                                                      <img class="tabs__live--vector" src="assets/images/vector_live.png" alt="vector">
+                                                      <div class="tabs__live--title">WHATCH LIVE</div>
+                                                </button>
+                                          </div>
+                                    </div> <!-- /.tabs__content-->
+                              </div> <!-- /.tabs__item -->
+
+
+                              <!-- Tabs Battles -->
+                              <div class="tabs__item"  id="battles">
+                                    <div class="tabs__content">
+                                          <div class="tabs__content--header">Group Stage</div>
+                                          <hr>
+                                          <div class="tabs__content--icons">
+                                                <img src="assets/images/tabs_icon.png" alt="Logo">
+                                          </div>
+
+                                          <div class="tabs__info">
+                                                <div class="tabs__info--title">
+                                                      <p>Group A</p>
+                                                </div>
+                                                <div class="tabs__info--title">
+                                                      <p>Group B</p>
+                                                </div>
+                                                <div class="tabs__info--match">
+                                                      <p>match  2</p>
+                                                </div>
+                                          </div>
+
+                                          <div class="tabs__footer">
+                                                <p>Map: Erangel</p>
+                                          </div>
+
+                                          <!-- Watch Live -->
+                                          <button class="tabs__live" type="button">
+                                                <div class="tabs__live--watch">
+                                                      <img class="tabs__live--vector" src="assets/images/vector_live.png" alt="vector">
+                                                      <div class="tabs__live--title">WHATCH LIVE</div>
+                                                </div>
+                                          </button>
+                                    </div> <!-- /.tabs__content-->
+
+                                    <div class="tabs__content">
+                                          <div class="tabs__content--header">Group Stage</div>
+                                          <hr>
+                                          <div class="tabs__content--icons">
+                                                <img src="assets/images/tabs_icon.png" alt="Logo">
+                                          </div>
+
+                                          <div class="tabs__info">
+                                                <div class="tabs__info--title">
+                                                      <p>Group A</p>
+                                                </div>
+                                                <div class="tabs__info--title">
+                                                      <p>Group B</p>
+                                                </div>
+                                                <div class="tabs__info--match">
+                                                      <p>match  2</p>
+                                                </div>
+                                          </div>
+
+                                          <div class="tabs__footer">
+                                                <p>Map: Erangel</p>
+                                          </div>
+
+                                          <!-- Watch Live -->
+                                          <button class="tabs__live" type="button">
+                                                <div class="tabs__live--watch">
+                                                      <img class="tabs__live--vector" src="assets/images/vector_live.png" alt="vector">
+                                                      <div class="tabs__live--title">WHATCH LIVE</div>
+                                                </div>
+                                          </button>
+                                    </div> <!-- /.tabs__content-->
+
+                                    <div class="tabs__content">
+                                          <div class="tabs__content--header">Group Stage</div>
+                                          <hr>
+                                          <div class="tabs__content--icons">
+                                                <img src="assets/images/tabs_icon.png" alt="Logo">
+                                          </div>
+
+                                          <div class="tabs__info">
+                                                <div class="tabs__info--title">
+                                                      <p>Group A</p>
+                                                </div>
+                                                <div class="tabs__info--title">
+                                                      <p>Group B</p>
+                                                </div>
+                                                <div class="tabs__info--match">
+                                                      <p>match  2</p>
+                                                </div>
+                                          </div>
+
+                                          <div class="tabs__footer">
+                                                <p>Map: Erangel</p>
+                                          </div>
+
+                                          <!-- Watch Live -->
+                                          <button class="tabs__live" type="button">
+                                                <div class="tabs__live--watch">
+                                                      <img class="tabs__live--vector" src="assets/images/vector_live.png" alt="vector">
+                                                      <div class="tabs__live--title">WHATCH LIVE</div>
+                                                </div>
+                                          </button>
+                                    </div> <!-- /.tabs__content-->
+
+                                    <div class="tabs__content">
+                                          <div class="tabs__content--header">Group Stage</div>
+                                          <hr>
+                                          <div class="tabs__content--icons">
+                                                <img src="assets/images/tabs_icon.png" alt="Logo">
+                                          </div>
+
+                                          <div class="tabs__info">
+                                                <div class="tabs__info--title">
+                                                      <p>Group A</p>
+                                                </div>
+                                                <div class="tabs__info--title">
+                                                      <p>Group B</p>
+                                                </div>
+                                                <div class="tabs__info--match">
+                                                      <p>match  2</p>
+                                                </div>
+                                          </div>
+
+                                          <div class="tabs__footer">
+                                                <p>Map: Erangel</p>
+                                          </div>
+
+                                          <!-- Watch Live -->
+                                          <button class="tabs__live" type="button">
+                                                <div class="tabs__live--watch">
+                                                      <img class="tabs__live--vector" src="assets/images/vector_live.png" alt="vector">
+                                                      <div class="tabs__live--title">WHATCH LIVE</div>
+                                                </div>
+                                          </button>
+                                    </div> <!-- /.tabs__content-->
+
+                                    <div class="tabs__content">
+                                          <div class="tabs__content--header">Group Stage</div>
+                                          <hr>
+                                          <div class="tabs__content--icons">
+                                                <img src="assets/images/tabs_icon.png" alt="Logo">
+                                          </div>
+
+                                          <div class="tabs__info">
+                                                <div class="tabs__info--title">
+                                                      <p>Group A</p>
+                                                </div>
+                                                <div class="tabs__info--title">
+                                                      <p>Group B</p>
+                                                </div>
+                                                <div class="tabs__info--match">
+                                                      <p>match  2</p>
+                                                </div>
+                                          </div>
+
+                                          <div class="tabs__footer">
+                                                <p>Map: Erangel</p>
+                                          </div>
+
+                                          <!-- Watch Live -->
+                                          <button class="tabs__live" type="button">
+                                                <div class="tabs__live--watch">
+                                                      <img class="tabs__live--vector" src="assets/images/vector_live.png" alt="vector">
+                                                      <div class="tabs__live--title">WHATCH LIVE</div>
+                                                </div>
+                                          </button>
+                                    </div> <!-- /.tabs__content-->
+                              </div> <!-- /.tabs__item -->
+
+                              <div class="tabs__arrows">
+                                    <button class="tabs__arrows--prev" type="button"  id="tabsArrowPrev"></button>
+                                    <button class="tabs__arrows--next" type="button"  id="tabsArrowNext"></button>
+                              </div>
+                        </div> <!-- /.tabs__wrapper -->
+                  </div> <!-- /.tabs -->
+            </div> <!-- /.schedule -->
+      </div> <!-- /.container-->
+</section>
+
+
+<!-- Participate -->
+<section class="section  section--yellow">
+      <div class="container">
+            <div class="participate__wraper">
+                  <div class="participate">
+                        <div class="participate__info">
+                              <h1 class="participate__title">Этапы проведения</h1>
+                              <div class="participate__title--info">The path to every Major begins with the open qualifiers for the regional Minor Championships, spanning Europe, CIS, Americas, and Asia. Here is the schedule of every qualifying stage of StarLadder Major.</div>
+                        </div>
+
+                        <div class="participate__confirm">
+                              <div class="participate__confirm--item">
+                                    <img class="participate__confirm--icon" src="assets/images/part-icons/part_icon1.png" alt="icon">
+                                    <div class="participate__confirm--title">Registration</div>
+                                    <div class="participate__confirm--date">29 sep, 19:00 – 20 nov, 10:00</div>
+                              </div>
+
+                              <div class="participate__confirm--item">
+                                    <img class="participate__confirm--icon" src="assets/images/part-icons/part_icon2.png" alt="icon">
+                                    <div class="participate__confirm--title">Check-in</div>
+                                    <div class="participate__confirm--date">29 sep, 19:00 – 20 nov, 10:00</div>
+                              </div>
+
+                              <div class="participate__confirm--item">
+                                    <img class="participate__confirm--icon" src="assets/images/part-icons/part_icon3.png" alt="icon">
+                                    <div class="participate__confirm--title">Scheduling</div>
+                                    <div class="participate__confirm--date">29 sep, 19:00 – 20 nov, 10:00</div>
+                              </div>
+                              <div class="participate__vector--first">vector</div>
+                              <div class="participate__vector--second">vector</div>
+                        </div>
+                        <button class="participate__reg" type="button">
+                              <img class="img participate__reg--img" src="assets/images/btn_icon.png" alt="icon">
+                              <div class="participate__reg--title"> Registration</div>
+                        </button>
+                  </div>
+            </div>
+      </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="footer">
+      <div class="container">
+            <table class="table">
+                  <thead>
+                        <tr>
+                              <th class="table--th">#</th>
+                              <th>Team</th>
+                        </tr>
+                  </thead>
+                  <tbody>
+                        <tr>
+                              <td  class="table--td">353</td>
+                              <td>
+                                    <img class="img" src="assets/images/table_icon.png" alt="table icon">
+                                    <div class="table--name">Dianne Russel</div>
+                              </td>
+                        </tr>
+                        <tr>
+                              <td class="table--td">353</td>
+                              <td>
+                                    <img class="img" src="assets/images/table_icon.png" alt="table icon">
+                                    <div class="table--name">Dianne Russel</div>
+                              </td>
+                        </tr>
+                        <tr>
+                              <td class="table--td">353</td>
+                              <td>
+                                    <img class="img" src="assets/images/table_icon.png" alt="table icon">
+                                    <div class="table--name">Dianne Russel</div>
+                              </td>
+                        </tr>
+                        <tr>
+                              <td  class="table--td">353</td>
+                              <td>
+                                    <img class="img" src="assets/images/table_icon.png" alt="table icon">
+                                    <div class="table--name">Dianne Russel</div>
+                              </td>
+                        </tr>
+                        <tr>
+                              <td  class="table--td">353</td>
+                              <td>
+                                    <img class="img" src="assets/images/table_icon.png" alt="table icon">
+                                    <div class="table--name">Dianne Russel</div>
+                              </td>
+                        </tr>
+                        <tr>
+                              <td  class="table--td">353</td>
+                              <td>
+                                    <img class="img" src="assets/images/table_icon.png" alt="table icon">
+                                    <div class="table--name">Dianne Russel</div>
+                              </td>
+                        </tr>
+                        <tr>
+                              <td  class="table--td">353</td>
+                              <td>
+                                    <img class="img" src="assets/images/table_icon.png" alt="table icon">
+                                    <div class="table--name">Dianne Russel</div>
+                              </td>
+                        </tr>
+                        <tr>
+                              <td  class="table--td">353</td>
+                              <td>
+                                    <img class="img" src="assets/images/table_icon.png" alt="table icon">
+                                    <div class="table--name">Dianne Russel</div>
+                              </td>
+                        </tr>
+                        <tr>
+                              <td  class="table--td">353</td>
+                              <td>
+                                    <img class="img" src="assets/images/table_icon.png" alt="table icon">
+                                    <div class="table--name">Dianne Russel</div>
+                              </td>
+                        </tr>
+                  </tbody>
+            </table>
+            <div class="footer__links">
+                  <div class="footer__links--item">SUPPORT</div>
+                  <div class="footer__links--item">RULES</div>
+                  <div class="footer__links--item">FAQ</div>
+            </div>
+      </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

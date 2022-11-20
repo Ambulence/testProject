@@ -1,0 +1,36 @@
+// main: ../style.less
+.section {
+      background-color: @dark;
+      &--yellow {
+            background-color: @yellow;
+      }
+
+      &--schedule {
+            padding-bottom: 70px;
+      }
+}
+
+.section__title {
+      padding-top: 140px;
+
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 0.7;
+      color: @white;
+}
+
+.schedule {
+      margin-top: 40px;
+      border-top: @yellow 2px solid;
+}
+
+/* =====
+===== Media*/
+@media (max-width: 767px) {
+      .section {
+            &__title {
+                  padding-top: 50px;
+            }
+      }
+}
+

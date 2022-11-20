@@ -1,0 +1,63 @@
+// main: ../style.less
+
+.header {
+      width: 100%;
+      height: 100px;
+      padding: 13px 0 0;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+}
+
+.header__inner {
+      max-width: 740px;
+      padding-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      border-bottom: 1px solid #F3A917;
+}
+
+.social__link {
+      display: flex;
+}
+
+.link__item {
+      margin-left: 36px;
+
+      text-decoration: none;
+}
+
+.link__icon {
+      display: block;
+      width: 30px;
+      height: 30px;
+
+      fill: @white;
+      transition: fill .2s linear;
+
+      &:hover {
+            fill: darken(@white, 20%);
+      }
+}
+
+
+/* =====
+===== Media*/
+@media (max-width: 991px) {
+      .header {
+            &__inner {
+                  padding-bottom: 10px;
+            }
+      }
+
+}
+
+@media (max-width: 767px) {
+      .link__item {
+            margin-left: 30px;
+      }
+}

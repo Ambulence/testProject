@@ -1,0 +1,200 @@
+// main: ../style.less
+
+.participate {
+      padding: 120px 0;
+      position: relative;
+
+      display: flex;
+      justify-content: space-between;
+
+      &__wraper {
+            padding-bottom: 100px;
+      }
+
+      &__info {
+            width: 100%;
+            max-width: 608px;
+      }
+
+      &__title {
+            margin-bottom: 20px;
+
+            font-weight: 700;
+            font-size: 32px;
+            color: @black;
+            &--info {
+                  font-weight: 500;
+                  font-size: 18px;
+                  color: @black;
+            }
+      }
+
+      &__confirm {
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            position: relative;
+
+            font-size: 16px;
+            color: @black;
+            &--item {
+                  padding: 0 30px;
+                  text-align: center;
+                  &:nth-child(3) {
+                        padding: 0 0 0 30px;
+                  }
+                  &:nth-child(1) {
+                        padding: 0 30px 0 0;
+                  }
+            }
+            &--title {
+                  margin-top: 30px;
+                  font-weight: 700;
+            }
+            &--date {
+                  font-weight: 400;
+            }
+      }
+
+      &__vector {
+            &--first {
+                  position: absolute;
+                  top: 50%;
+                  right: calc(50% + 100px);
+                  transform: translateY(-50%);
+                  z-index: 1;
+
+                  font-size: 0;
+
+                  content: "" ;
+                  width: 76px;
+                  height: 3px;
+                  background-color: @white;
+            }
+            &--second {
+                  position: absolute;
+                  top: 50%;
+                  left: calc(50% + 100px);
+                  transform: translateY(-50%);
+                  z-index: 1;
+
+                  font-size: 0;
+
+                  content: "" ;
+                  width: 76px;
+                  height: 3px;
+                  background-color: @white;
+            }
+      }
+
+      &__reg {
+            display: flex;
+            align-items: center;
+            padding: 16px 60px 16px 90px;
+            min-width: 341px;
+            height: auto;
+
+            position: absolute;
+            bottom: 0;
+
+            left: calc(50% + 200px);
+
+            background-color: @white;
+            border-radius: 5px;
+            border: none;
+            transition: background .2s linear;
+            cursor: pointer;
+
+            font-weight: 600;
+            font-size: 16px;
+            color: @black;
+            &--img {
+                  margin-right: 10px;
+            }
+            &:hover {
+                  color: @white;
+                  background-color: @light_black;
+            }
+      }
+}
+
+
+/* =====
+===== Media*/
+@media (max-width: 1024px) {
+
+      .participate {
+            flex-wrap: wrap;
+
+            &__info {
+                  max-width: 100%;
+                  margin-bottom: 20px;
+            }
+
+            &__title {
+                  text-align: center;
+
+                  &--info {
+                        text-align: center;
+                  }
+            }
+
+            &__confirm {
+                  left: 50%;
+                  transform: translateX(-50%);
+            }
+
+            &__reg {
+                  left: 50%;
+                  transform: translateX(-50%);
+            }
+      }
+}
+
+@media (max-width: 767px) {
+      .participate {
+
+            &__confirm {
+
+                  &--item {
+                        padding: 0 10px;
+
+                        &:nth-child(3) {
+                              padding: 0 0 0 10px;
+                        }
+                        &:nth-child(1) {
+                              padding: 0 10px 0 0;
+                        }
+                  }
+
+                  &--date {
+                        font-size: 14px;
+                  }
+            }
+
+            &__vector--first,
+            &__vector--second {
+                  display: none;
+            }
+      }
+}
+
+@media (max-width: 575px) {
+      .participate {
+
+            &__confirm {
+
+                  &--item {
+                        padding: 0 5px;
+
+                        &:nth-child(3) {
+                              padding: 0 0 0 5px;
+                        }
+                        &:nth-child(1) {
+                              padding: 0 5px 0 0;
+                        }
+                  }
+            }
+      }
+}

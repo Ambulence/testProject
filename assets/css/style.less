@@ -1,0 +1,50 @@
+// compress: true
+
+
+@import "vars";
+
+body {
+      margin: 0;
+
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      color: @white;
+}
+
+*,
+*:before,
+*::after {
+      box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+      margin: 0;
+}
+
+p {
+      margin: 0;
+}
+
+.img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+}
+
+.container  {
+      width: 100%;
+      max-width: 1550px;
+      margin: 0 auto;
+      padding: 0 15px;
+}
+
+/* Blocks */
+@import "blocks/header.less";
+@import "blocks/slick.less";
+@import "blocks/intro.less";
+@import "blocks/schedule.less";
+@import "blocks/tabs.less";
+@import "blocks/participate.less";
+@import "blocks/footer.less";
+@import "blocks/table.less";
+

@@ -1,0 +1,53 @@
+// main: ../style.less
+
+.footer {
+      height: 100%;
+      min-height: 1324px;
+      position: relative;
+
+      background:  url("@{img}footer_img.jpg") center, no-repeat;
+      background-size: cover;
+
+      &__links {
+            width: 100%;
+            max-width: 480px;
+            display: flex;
+            justify-content: space-between;
+
+            position: absolute;
+            bottom: 89px;
+            left: calc(52% + 100px);
+
+           font-weight: 700;
+           font-size: 20px;
+
+           &--item {
+            &:hover {
+                  text-decoration: underline;
+                 }
+           }
+      }
+
+}
+
+
+/* =====
+===== Media*/
+@media (max-width: 1024px) {
+
+      .footer {
+
+            &__links {
+                  left: 50%;
+                  transform: translateX(-50%);
+            }
+      }
+}
+
+@media (max-width: 767px) {
+      .footer {
+            &__links {
+                  padding: 0 15px 0 15px;
+            }
+      }
+}
